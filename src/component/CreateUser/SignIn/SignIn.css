@@ -1,0 +1,67 @@
+.signIn-page-style {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 80px) ;
+}
+.signIn-form-style {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 25px;
+    border-radius: 5px;
+}
+.signIn-form-style  small{
+    color: red;
+}
+.signIn-logo img {
+    max-width: 300px;
+}
+.inputs-field-style {
+    margin-top: 30px;
+    line-height: 50px;
+}
+.input-style {
+    width: 250px;
+    border: none;
+    outline: none;
+    padding: 7px 17px;
+    font-size: 16px;
+    box-shadow: rgba(99, 96, 255, 0.822) 0px 0px 0px 2px ;
+    border-radius: 3px;
+}
+.submit-btn {
+    width: 250px;
+    border: none;
+    outline: none;
+    padding: 7px 18px;
+    background-color: rgb(19, 226, 253);
+    color:rgb(75, 18, 75);
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 3px;
+    margin-left: 20px;
+    display: block;
+}
+
+.firebase-signIn {
+    text-align: center;
+}
+.firebase-signIn button {
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    margin: 0 10px;
+}
+.firebase-signIn i {
+    font-size: 30px;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+    color: rgb(0, 48, 204);
+}
+.firebase-signIn a {
+    text-align: center;
+    display: block;
+    margin-top: 5px;
+}

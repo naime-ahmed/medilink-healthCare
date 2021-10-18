@@ -1,0 +1,33 @@
+
+.footer-items-style{
+    
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(27, 27, 27);
+    color: #fff;
+
+}
+.single-item-style p{
+    cursor: pointer;
+}
+.single-item-style p:hover{
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 750px) {
+    .footer-items-style{
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 30px;
+    }
+}
+@media only screen and (max-width: 490px) {
+
+    .footer-items-style{
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+
+}

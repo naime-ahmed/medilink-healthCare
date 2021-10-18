@@ -1,0 +1,36 @@
+.health-check-style {
+    margin: 50px 6%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    align-items: center;
+    justify-content: center;
+
+}
+.health-check-text-style h1{
+    color: rgb(97, 97, 240);
+}
+.health-check-text-style p{
+    text-align: justify;
+    line-height: 25px;
+}
+.health-check-img-style img {
+    width: 100%;
+}
+
+@media only screen and (max-width: 490px) {
+
+    .health-check-style{
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+    .health-check-img-style {
+        order: 1;
+    }
+    .health-check-text-style {
+        order: 2;
+    }
+    .health-check-text-style h1{
+        font-size: 30px;
+    }
+}

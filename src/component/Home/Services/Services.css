@@ -1,0 +1,38 @@
+.services-style{
+    margin: 40px 6%;
+}
+.services-header{
+    text-align: center;
+    font-size: 22px;
+}
+.services-header h1{
+    color: rgb(2, 201, 141);
+}
+.services-header span{
+    color: rgb(3, 184, 18);
+}
+.service-parent{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+
+}
+
+@media only screen and (max-width: 750px) {
+    .service-parent{
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 30px;
+    }
+}
+@media only screen and (max-width: 490px) {
+    .services-style{
+        margin: 50px 1%;
+    }
+    .service-parent{
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+    .services-header h1{
+        font-size: 30px;
+    }
+}
