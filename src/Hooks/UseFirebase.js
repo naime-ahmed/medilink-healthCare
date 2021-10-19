@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import initializeAuthentication from '../FirebaseSetup/Firebase.init';
 import { GoogleAuthProvider, GithubAuthProvider, signInWithPopup, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword , signOut , updateProfile, sendEmailVerification, getAuth} from "firebase/auth";
-import { useHistory } from 'react-router';
+import { useHistory, useLocation } from 'react-router';
 
 initializeAuthentication();
 
@@ -16,6 +16,7 @@ const UseFirebase = () => {
 
     const auth = getAuth();
     const history = useHistory();
+    
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
 

@@ -18,8 +18,8 @@ const NavigationBar = () => {
       </label>
       <ul>
         { user.email && <li> Welcome { user.displayName}</li>}
-        <li><Link className="active" to="/home">Home</Link></li>
-        <li><Link to="/doctors">Doctors</Link></li>
+        <li><Link className="active " to="/home">Home</Link></li>
+        <li><Link  to="/doctors">Doctors</Link></li>
         <li><Link to="/about">About</Link></li>
         { user.email ?
         <li><button onClick={handleSignOut} className="signOut-btn" >Sign out</button></li> : <li><Link to="/signIn">Sign in</Link></li>
