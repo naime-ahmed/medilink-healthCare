@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import initializeAuthentication from '../FirebaseSetup/Firebase.init';
-import { GoogleAuthProvider, GithubAuthProvider, signInWithPopup, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword , signOut , updateProfile, sendEmailVerification, getAuth} from "firebase/auth";
-import { useHistory, useLocation } from 'react-router';
+import { GoogleAuthProvider, GithubAuthProvider, signInWithPopup, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword , signOut , updateProfile, getAuth} from "firebase/auth";
+import { useHistory} from 'react-router';
 
 initializeAuthentication();
 
@@ -22,28 +22,14 @@ const UseFirebase = () => {
 
     const handleGoogleLogin = () => {
         setIsLoading(true);
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                setUser(result.user);
-                setError("");
-            })
-            .catch(error => {
-                setError(error.message);
-            })
-            .finally(() => setIsLoading(false));
+        return signInWithPopup(auth, googleProvider)
+
     }
 
     const handleGithubLogin = () => {
         setIsLoading(true);
-        signInWithPopup(auth, githubProvider)
-            .then(result => {
-                setUser(result.user);
-                setError("");
-            })
-            .catch(error => {
-                setError(error.message);
-            })
-            .finally(() => setIsLoading(false));
+        return signInWithPopup(auth, githubProvider)
+
     }
 
     const handleRegistration = () => {
@@ -68,17 +54,8 @@ const UseFirebase = () => {
 
     const handleSignIn = () => {
         setIsLoading(true);
-        signInWithEmailAndPassword(auth, email, password)
-            .then(result => {
-                setUser(result.user);
-                setError("");
-                alert("Sign In successful")
-                
-            })
-            .catch(error => {
-                setError(error.message);
-            })
-            .finally(() => setIsLoading(false));
+        return signInWithEmailAndPassword(auth, email, password)
+
     }
 
     const handleSignOut = () => {
@@ -87,7 +64,6 @@ const UseFirebase = () => {
             .then(() => {
                 setUser({});
                 alert("You will be Sign Out");
-                
                 
             })
             .finally(() => setIsLoading(false));
@@ -112,10 +88,12 @@ const UseFirebase = () => {
         handleRegistration,
         handleSignIn,
         handleSignOut,
+        setIsLoading,
         isLoading,
         setName,
         setEmail,
         setPassword,
+        setError,
         user,
         error
     }
