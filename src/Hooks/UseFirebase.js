@@ -42,12 +42,15 @@ const UseFirebase = () => {
                     displayName: name
                 })
                 setError("")
+                
                 alert("registration successful")
                 history.push('/home')
+                
             })
             
             .catch(error => {
                 setError(error.message);
+                window.location.reload();
             })
             .finally(() => setIsLoading(false));
     }
